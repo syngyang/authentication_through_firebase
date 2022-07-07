@@ -11,14 +11,15 @@ import {
 } from '@chakra-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import { FaGoogle } from 'react-icons/fa'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Card } from '../components/Card'
 import DividerWithText from '../components/DividerWithText'
 import { Layout } from '../components/Layout'
 import { useAuth } from '../contexts/AuthContext'
 
 export default function Registerpage() {
-  const history = useHistory()
+  const navigate = useNavigate()
   const [email, setEmail] = useState("")
   const [password, setPassword]= useState("")
   const [ isSubmitting, setIsSubmitting]= useState(false)
@@ -82,7 +83,7 @@ export default function Registerpage() {
           </Stack>
         </chakra.form>
         <Center my={4}>
-          <Button variant='link' onClick={() => history.push('/login')}>
+          <Button variant='link' onClick={() => navigate.push('/login')}>
             Login
           </Button>
         </Center>

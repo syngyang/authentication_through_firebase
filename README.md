@@ -1,4 +1,12 @@
-# React Authentication using Firebase (new API v9)
+# react-router-dom v6.3.0
+
+In react-router-dom v6 useHistory() is replaced by useNavigate().
+You can use:
+import { useNavigate } from 'react-router-dom';
+const navigate = useNavigate();
+navigate('/home');
+
+# React Authentication using Firebase (v9.8.4)
 
 Reactjs authentication using firebase auth (using the new v9 API). The benefit of using this new API is that the final bundle size is much smaller compared to the previous - which in turn makes your React site efficient and load much faster.
 

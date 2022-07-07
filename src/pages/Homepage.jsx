@@ -42,7 +42,8 @@ export default function Homepage() {
         </Badge>
       </Heading>
       <OrderedList fontSize='3xl' my={4}>
-        <ListItem>Email password authentication (Register/Login)</ListItem>
+        <ListItem>"react-router-dom": "^6.3.0" - no Switch, but Routes, useNavigate()</ListItem>
+        <ListItem>Email Password Authentication (Register/Login)</ListItem>
         <ListItem>Google Sign in</ListItem>
         <ListItem>Forgot Password</ListItem>
         <ListItem>Custom Reset password page</ListItem>

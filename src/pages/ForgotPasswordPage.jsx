@@ -10,13 +10,15 @@ import {
   useToast,
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Card } from '../components/Card'
 import DividerWithText from '../components/DividerWithText'
 import { Layout } from '../components/Layout'
 
 export default function ForgotPasswordPage() {
-  const history = useHistory()
+  // const history = useHistory()
+  const navigate = useNavigate()
 
   return (
     <Layout>
@@ -42,7 +44,7 @@ export default function ForgotPasswordPage() {
         </chakra.form>
         <DividerWithText my={6}>OR</DividerWithText>
         <Center>
-          <Button variant='link' onClick={() => history.push('/login')}>
+          <Button variant='link' onClick={() => navigate.push('/login')}>
             Login
           </Button>
         </Center>

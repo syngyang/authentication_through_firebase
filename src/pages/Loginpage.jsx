@@ -14,13 +14,16 @@ import {
 } from '@chakra-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import { FaGoogle } from 'react-icons/fa'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Card } from '../components/Card'
 import DividerWithText from '../components/DividerWithText'
 import { Layout } from '../components/Layout'
 
 export default function Loginpage() {
-  const history = useHistory()
+  // const history = useHistory()
+  const navigate = useNavigate()
 
   return (
     <Layout>
@@ -58,7 +61,7 @@ export default function Loginpage() {
           <Button variant='link'>
             <Link to='/forgot-password'>Forgot password?</Link>
           </Button>
-          <Button variant='link' onClick={() => history.push('/register')}>
+          <Button variant='link' onClick={() => navigate.push('/register')}>
             Register
           </Button>
         </HStack>
